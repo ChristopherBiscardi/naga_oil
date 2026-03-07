@@ -524,7 +524,7 @@ impl<'a> DerivedModule<'a> {
                     | Statement::MemoryBarrier(_)
                     | Statement::ControlBarrier(_) => stmt.clone(),
                     Statement::RayPipelineFunction(ray_pipeline_function) => {
-                        Statement::RayPipelineFunction(ray_pipeline_function.clone())
+                        Statement::RayPipelineFunction(*ray_pipeline_function)
                     }
                     Statement::CooperativeStore { target, data } => Statement::CooperativeStore {
                         target: map_expr!(target),
