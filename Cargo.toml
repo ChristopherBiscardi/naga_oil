@@ -32,3 +32,7 @@ indexmap = "2"
 wgpu = { version = "28", features = ["naga-ir"] }
 futures-lite = "2"
 tracing-subscriber = { version = "0.3", features = ["std", "fmt"] }
+
+[patch."crates-io"]
+wgpu = { git = "https://github.com/gfx-rs/wgpu", branch = "trunk" }
+naga = { git = "https://github.com/gfx-rs/wgpu", branch = "trunk" }
