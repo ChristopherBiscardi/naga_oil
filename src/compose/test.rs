@@ -1488,7 +1488,7 @@ mod test {
             })
             .unwrap();
 
-        let instance = wgpu::Instance::new(wgpu::InstanceDescriptor::default());
+        let instance = wgpu::Instance::new(wgpu::InstanceDescriptor::new_without_display_handle());
         let adapter =
             futures_lite::future::block_on(instance.enumerate_adapters(wgpu::Backends::all()))
                 .into_iter()
