@@ -222,7 +222,7 @@ impl<'a> DerivedModule<'a> {
                 binding: gv.binding,
                 ty: self.import_type(&gv.ty),
                 init: gv.init.map(|c| self.import_global_expression(c)),
-                memory_decorations: gv.memory_decorations
+                memory_decorations: gv.memory_decorations,
             };
 
             let span = self
